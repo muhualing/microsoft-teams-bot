@@ -1,0 +1,69 @@
+{
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "content": {
+        "type": "AdaptiveCard",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "Conflict",
+                "weight": "Lighter",
+                "size": "Medium"
+            },
+            {
+                "type": "TextBlock",
+                "text": "Subject",
+                "size": "Large",
+                "weight": "Bolder"
+            },
+            {
+                "type": "TextBlock",
+                "spacing": "None",
+                "color": "Attention",
+                "text": "12:30 PM - 1:30 PM",
+                "isSubtle": true
+            },
+            {
+                "type": "TextBlock",
+                "text": "New Time Proposed:",
+                "weight": "Bolder"
+            },
+            {
+                "type": "TextBlock",
+                "text": "DateTime",
+                "weight": "Bolder",
+                "color": "Good"
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "DECLINE",
+                "style": "destructive",
+                "data": {
+                    "msteams": {
+                        "type": "messageBack",
+                        "displayText": "decline id",
+                        "text": "decline",
+                        "value": "{\"bfKey\": \"bfVal\", \"conflictKey\": \"from value\"}"
+                    }
+                }
+            },
+            {
+                "type": "Action.Submit",
+                "title": "PROPOSE IT",
+                "style": "positive",
+                "data": {
+                    "msteams": {
+                        "type": "messageBack",
+                        "displayText": "propose id",
+                        "text": "propose it",
+                        "value": "{\"bfKey\": \"bfVal\", \"conflictKey\": \"from value\"}"
+                    }
+                }
+            }
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.0",
+        "speak": "<s>Your  meeting about \"Adaptive Card design session\"<break strength='weak'/> is starting at 12:30pm</s><s>Do you want to snooze <break strength='weak'/> or do you want to send a late notification to the attendees?</s>"
+    }
+}
